@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hi my love!</title>
+    <script>
+        function checkCode() {
+            const correctCode = "112723"; // Replace with your actual code
+            const userCode = document.getElementById("codeInput").value;
+            if (userCode === correctCode) {
+                // Enable the download link
+                document.getElementById("downloadLink").style.display = "block";
+                document.getElementById("message").textContent = "Access Granted! You can now download the PDF.";
+            } else {
+                // Show an error message
+                document.getElementById("message").textContent = "Access Denied! Incorrect code.";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Enter passcode to access hehe :D</h1>
+    <h3><i>Hint: 6 digit code a date that is important to us ^^ </i></h3>
+    <input type="text" id="codeInput" placeholder="Enter your code here">
+    <button onclick="checkCode()">Submit</button>
+    <p id="message"></p>
+    <a id="downloadLink" href="ship/for-my-ship.pdf" download style="display: none;">Download PDF</a>
+</body>
+</html>
